@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Login } from '../interfaces/login'
-import { LoginService } from '../services/login.service';
+import { Login } from '../../interfaces/login'
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +22,8 @@ export class LoginComponent implements OnInit {
       this.loginService.onSave(this.login).subscribe((data) => {
         console.log(data);
         let key = 'Autorization';
-        localStorage.setItem(key, data.token_type+' '+data.access_token);
+        let result = data['token_type']+' '+data['access_token'];
+        localStorage.setItem(key, result);
       }, (error) => {
         console.log(error);
       });

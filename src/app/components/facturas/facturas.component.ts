@@ -9,10 +9,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FacturasComponent implements OnInit {
   API_ENDPOINT = 'http://localhost:8000/api';
+  
   constructor(private facturasService: FacturasService, private httpClient: HttpClient) {
-    httpClient.get(this.API_ENDPOINT+'/factura').subscribe((data) => {console.log(data)});
+    httpClient.get(this.API_ENDPOINT+'/factura', {headers: {'X-Requested-With': 'XMLHttpRequest', 'Authorization': localStorage.getItem("Autorization")}})
+    .subscribe((data) => {
+      console.log(data);
+    });
    }
-
 
   ngOnInit() {
   }

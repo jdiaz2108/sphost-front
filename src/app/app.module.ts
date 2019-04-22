@@ -11,10 +11,9 @@ import {FormsModule} from '@angular/forms';
 
 // Componentes
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './auth/logout/logout.component';
-import { LeftPanelComponent } from './layout/left-panel/left-panel.component';
-import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './components/login/login.component';
+import { LogoutComponent } from './components/auth/logout/logout.component';
+import { LeftPanelComponent } from './components/layout/left-panel/left-panel.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FacturasComponent } from './components/facturas/facturas.component';
 
@@ -24,7 +23,6 @@ import { FacturasComponent } from './components/facturas/facturas.component';
     LoginComponent,
     LogoutComponent,
     LeftPanelComponent,
-    AboutComponent,
     FacturasComponent
   ],
   imports: [
