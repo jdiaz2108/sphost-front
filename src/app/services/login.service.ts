@@ -14,10 +14,14 @@ export class LoginService {
   }
 
   onSave(login: Login) {
-    let headers: HttpHeaders = new HttpHeaders();
-    headers = headers.append( 'Content-Type', 'application/json');
-    headers = headers.append( 'X-Requested-With', 'XMLHttpRequest');
-    return this.httpClient.post(this.API_ENDPOINT+ '/auth/login', login, {headers: headers})
+
+
+
+   const headers = new HttpHeaders({'Content-Type': 'application/json'});
+    // let headers: HttpHeaders = new HttpHeaders();
+    // headers = headers.append( 'Content-Type', 'application/json');
+    // headers = headers.append( 'X-Requested-With', 'XMLHttpRequest');
+    return this.httpClient.post(this.API_ENDPOINT+ '/auth/login', login, {headers: headers});
   }
 
   // getNewReleases() {

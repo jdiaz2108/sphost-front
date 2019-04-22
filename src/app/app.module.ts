@@ -16,6 +16,7 @@ import { LogoutComponent } from './auth/logout/logout.component';
 import { LeftPanelComponent } from './layout/left-panel/left-panel.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FacturasComponent } from './components/facturas/facturas.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     LogoutComponent,
     LeftPanelComponent,
-    AboutComponent
+    AboutComponent,
+    FacturasComponent
   ],
   imports: [
     HttpClientModule,

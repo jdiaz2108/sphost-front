@@ -21,9 +21,11 @@ export class LoginComponent implements OnInit {
     console.log(this.login);
       this.loginService.onSave(this.login).subscribe((data) => {
         console.log(data);
+        let key = 'Autorization';
+        localStorage.setItem(key, data.token_type+' '+data.access_token);
       }, (error) => {
         console.log(error);
-      })
+      });
   }
 
 }
