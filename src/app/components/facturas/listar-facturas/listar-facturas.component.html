@@ -1,0 +1,39 @@
+<div class="content mt-5">
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="col-12">
+        <form method="POST" class="col-12 form-group">
+          <div class="container-fluid">
+            <div class="col-lg-12">
+              <div class="card card mt-25">
+                <div class="card-header">
+                  <div class="card-body moon-gradient flotting-45 shadow float-none">
+                    <h3 class="m-0 text-center text-uppercase text-light">Titulo</h3>
+                  </div>
+                </div>
+
+                <div class="card-header">
+                    <button type="button" class="btn btn-primary"><i class="fa fa-search mr-3"></i> Buscar Cliente</button>
+                    <button mat-button color="accent" (click)="getClientes()"><i class="fa fa-search mr-3"></i> Buscar Cliente</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Extra large modal</button>
+                </div>
+                <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xxxx">
+                          <div class="modal-content">
+                            ...
+                          </div>
+                        </div>
+                      </div>
+                <pre>
+                    <code>
+                        {{allClientes | json}}
+                    </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

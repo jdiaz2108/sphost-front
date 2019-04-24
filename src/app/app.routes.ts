@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component'
 import { FacturasComponent } from './components/facturas/facturas.component';
+import { ListarFacturasComponent } from './components/facturas/listar-facturas/listar-facturas.component';
 
 const APP_ROUTES:Routes = [
   {
@@ -10,6 +11,10 @@ const APP_ROUTES:Routes = [
   {
     path: 'facturas',
     component: FacturasComponent
+  },
+  {
+    path: 'facturas/:id',
+    component: ListarFacturasComponent
   },
 
 

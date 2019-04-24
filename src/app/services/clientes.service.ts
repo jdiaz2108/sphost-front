@@ -5,16 +5,16 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class FacturasService {
+export class ClientesService {
 
   API_ENDPOINT = 'http://localhost:8000/api'
   constructor( private httpClient:HttpClient ) {
 
    }
 
-  getQuery(query:string) {
+  getQuery() {
 
-    const url = this.API_ENDPOINT+'/factura/'+query;
+    const url = this.API_ENDPOINT+'/clientes';
 
     const headers = new HttpHeaders({
       'X-Requested-With': 'XMLHttpRequest', 'Authorization': localStorage.getItem("Autorization")
@@ -22,8 +22,9 @@ export class FacturasService {
     return this.httpClient.get(url, {headers});
   }
 
-  getFactura(id:string) {
-    return this.getQuery(id)
+  getClientes() {
+    return this.getQuery()
     .pipe(map( data => data));
   }
+
 }
